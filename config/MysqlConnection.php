@@ -1,8 +1,10 @@
 <?php
+namespace config ;
+use \PDO ;
 class  MysqlConnection
 {
 
-    private   $conn = null;
+   private   $conn = null;
 
     public function __construct()
     {
@@ -20,13 +22,13 @@ class  MysqlConnection
         if ($this->conn->connect_error) {
             die("Connection failed: " . $this->conn->connect_error);
         }
-        echo "Connected successfully";
+       // echo "Connected successfully";
     }
 
-    public static function getDb()
+    public  function getDb()
     {
-        return self::$conn;
+        return $this->conn;
     }
 }
 
-$db = new MysqlConnection();
+
