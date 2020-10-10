@@ -11,9 +11,9 @@ class  MysqlConnection
 
 
         $servername = "localhost";
-        $username = "phpmyadmin";
-        $password = "root";
-        $dbname = "school";
+        $username = "root";
+        $password = "123456";
+        $dbname = "test1";
 
         // Create connection
         $this->conn = new  PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
