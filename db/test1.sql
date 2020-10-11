@@ -31,7 +31,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `class` (
   `classid` int NOT NULL,
   `name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `class`
@@ -52,7 +52,7 @@ CREATE TABLE `results` (
   `studentid` int NOT NULL,
   `subid` int NOT NULL,
   `marks` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `results`
@@ -85,7 +85,7 @@ CREATE TABLE `students` (
   `studentid` int NOT NULL,
   `name` varchar(255) NOT NULL,
   `classid` int UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `students`
@@ -109,7 +109,7 @@ CREATE TABLE `subjects` (
   `name` varchar(255) NOT NULL,
   `classid` int NOT NULL,
   `maxmarks` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `subjects`

@@ -1,6 +1,8 @@
 <?php
 namespace config ;
 use \PDO ;
+use \PDOException;
+
 class  MysqlConnection
 {
 
@@ -11,18 +13,17 @@ class  MysqlConnection
 
 
         $servername = "localhost";
-        $username = "root";
-        $password = "123456";
-        $dbname = "test1";
+        $username = "phpmyadmin";
+        $password = "root";
+        $dbname = "school";
 
-        // Create connection
-        $this->conn = new  PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-
-        // Check connection
-        if ($this->conn->connect_error) {
-            die("Connection failed: " . $this->conn->connect_error);
-        }
-       // echo "Connected successfully";
+        try {
+            $this->conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+         } catch(PDOException $e) {
+            echo "Error: " . $e->getMessage();
+          }
+       return $this ;
     }
 
     public  function getDb()
